@@ -5,7 +5,7 @@ List.c:
 Creates a doubly linked list and List ADT
 
 List.h:
-Has the List functions
+Header file for List functions
 
 ListClient.c:
 Given - Tests the List ADT
