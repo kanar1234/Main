@@ -8,7 +8,7 @@ List.h:
 Has the List functions
 
 ListClient.c:
-Given - Tests tje List ADT
+Given - Tests the List ADT
 
 Makefile:
 Given - Compiles the program
