@@ -1,3 +1,15 @@
+List.c:
+Creates a doubly linked list and List ADT
+
+List.h:
+Has the List functions
+
+Sparse.c:
+Takes in input from files and tests its functions
+
+Makefile:
+Given - Compiles Matrix List and Matrix Test
+
 Matrix.c:
 Creates functions to change matrices (uses linked list from Programming Assignment 1)
 
@@ -34,15 +46,3 @@ Creates functions to change matrices (uses linked list from Programming Assignme
   product(Matrix A, Matrix B) - returns the product of matrix A and B
 
   printMatrix(Matrix M) - prints the matrix onto the terminal
-
-List.c:
-Creates a doubly linked list and List ADT
-
-List.h:
-Has the List functions
-
-Sparse.c:
-Takes in input from files and tests its functions
-
-Makefile:
-Given - Compiles Matrix List and Matrix Test
