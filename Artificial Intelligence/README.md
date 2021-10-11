@@ -12,7 +12,7 @@ PA1 - Finds the shortest path from Pacman to a goal.
 
 PA2 - A reactive A.I. that collects all food on the board while avoiding ghosts.
 
-PA3 - A predicting A.I. that chooses the action with the highest chance of a good outcome.
+PA3 - A predictive A.I. that chooses the action with the highest chance of a good outcome.
 
 PA4 - A pacman group project where we want to eat as much food on the enemy side while having the enemy eat the
 as little food on our side of the board. This project was used to compete against other groups.
