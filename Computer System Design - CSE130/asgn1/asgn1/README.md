@@ -1,5 +1,4 @@
-Gregory Quach
-Alan Szeto
+Alan Szeto, Gregory Quach
 
 Instructions:
 
