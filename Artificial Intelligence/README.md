@@ -10,7 +10,10 @@ PA0 - Python review. Calculates cost of fruits purchased from shops and returns 
 
 PA1 - Finds the shortest path from Pacman to a goal.
 
-PA2 - A reactive A.I. that collects all food on the board while avoiding ghosts.
+PA2 - A reactive A.I. that collects all food on the board while avoiding ghosts using:
+  - Reflex agent: Calculates best action during each step given the board state
+  - Minimax agent: Calculates best action by determining future board states
+  - Minimax with Alpha-Beta Pruning: Same as minimax but removes options that are not possible to improve time complexity
 
 PA3 - A predictive A.I. that chooses the action with the highest chance of a good outcome.
 
