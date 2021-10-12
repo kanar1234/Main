@@ -1,5 +1,5 @@
 List.c:
-Creates a doubly linked list and List ADT
+Creates a doubly linked list and List ADT (From Assignment 1)
 
 List.h:
 Has the List functions
