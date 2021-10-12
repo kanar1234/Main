@@ -1,5 +1,8 @@
 Alan Szeto, Gregory Quach
 
+This project is a single threaded HTTP server using sockets that supports GET and PUT requests to read and write files and stores them into the server. 
+
+
 Instructions:
 
 Run the makefile
