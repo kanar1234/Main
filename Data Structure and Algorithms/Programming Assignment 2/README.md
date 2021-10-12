@@ -15,34 +15,81 @@ Creates functions to change matrices (uses linked list from Programming Assignme
 
 ----------------------------------------------Matrix Functions----------------------------------------------
 
-  newMatrix(int n) - creates a new matrix of size n (n is the row of the Matrix and an empty linked list is the column)
+-----Exported type-----
+typedef struct EntryObj* Entry;
 
-  newEntry(int n, double d) - creates a new entry object containing column = n and value = d //not used
+// Returns a reference to a new nXn Matrix object in the zero state.
 
-  freeMatrix() - frees matrix
+typedef struct MatrixObj* Matrix;
 
-  size(Matrix M) - returns size of matrix M
+-----Constructor and Deconstructors-----
 
-  NNZ(Matrix M) - returns number of non-zero elements in matrix M
+// Returns a reference to a new nXn Matrix object in the zero state.
 
-  equals(Matrix A, Matrix B) - returns true if A = B else returns false
+Matrix newMatrix(int n);
 
-  makeZero(Matrix M) - remove all columns of the matrix M
+// Frees heap memory associated with *pM, sets *pM to NULL.
 
-  changeEntry(Matrix M, int i, int j, double x) - sets Matrix[i][j] to x
+void freeMatrix(Matrix* pM);
 
-  copy(Matrix A) - returns a copy of matrix A
+-----Access functions-----
 
-  transpose(Matrix A) - returns the transpose of matrix A
+// Return the size of square Matrix M.
 
-  scalarMult(double x, Matrix A) - returns the matrix A scaled by x
+int size(Matrix M);
 
-  sumMatrix(Matrix A, Matrix B) - returns the sum of matrix A and B
+// Return the number of non-zero elements in M.
 
-  diff(Matrix A, Matrix B) - returns the difference of matrix A and B
+int NNZ(Matrix M);
 
-  vectorDot(List L1, List L2) - returns the vector dot product of two lists
+// Return true (1) if matrices A and B are equal, false (0) otherwise.
 
-  product(Matrix A, Matrix B) - returns the product of matrix A and B
+int equals(Matrix A, Matrix B);
 
-  printMatrix(Matrix M) - prints the matrix onto the terminal
+-----Manipulation Procedures-----
+
+// Re-sets M to the zero Matrix.
+
+void makeZero(Matrix M);
+
+// Changes the ith row, jth column of M to the value x.
+Pre: 1<=i<=size(M), 1<=j<=size(M)
+
+void changeEntry(Matrix M, int i, int j, double x);
+
+-----Matrix Arithmetic operations-----
+
+// Returns a reference to a new Matrix object having the same entries as A.
+
+Matrix copy(Matrix A);
+
+// Returns a reference to a new Matrix object representing the transpose of A
+
+Matrix transpose(Matrix A);
+
+// Returns a reference to a new Matrix object representing A scaled by x.
+
+Matrix scalarMult(double x, Matrix A);
+
+// Returns a reference to a new Matrix object representing A+B.
+pre: size(A)==size(B)
+
+Matrix sum(Matrix A, Matrix B);
+
+// Returns a reference to a new Matrix object representing A-B.
+pre: size(A)==size(B)
+
+Matrix diff(Matrix A, Matrix B);
+
+// Returns a reference to a new Matrix object representing AB
+pre: size(A)==size(B)
+
+Matrix product(Matrix A, Matrix B);
+
+// Prints a string representation of Matrix M to filestream out. Zero rows
+are not printed. Each non-zero is represented as one line consisting
+of the row number, followed by a colon, a space, then a space separated
+list of pairs "(col, val)" giving the column numbers and non-zero values
+in that row. The double val will be rounded to 1 decimal point.
+
+void printMatrix(Matrix M);
