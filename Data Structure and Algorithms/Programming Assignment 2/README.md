@@ -13,7 +13,7 @@ Given - Compiles Matrix List and Matrix Test
 Matrix.c:
 Creates functions to change matrices (uses linked list from Programming Assignment 1)
 
-//Matrix Functions
+----------------------------------------------Matrix Functions----------------------------------------------
 
   newMatrix(int n) - creates a new matrix of size n (n is the row of the Matrix and an empty linked list is the column)
 
