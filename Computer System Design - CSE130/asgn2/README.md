@@ -1,5 +1,5 @@
-Gregory Quach
-Alan Szeto
+Alan Szeto, Diego Vasquez
+
 
 Instructions:
 
