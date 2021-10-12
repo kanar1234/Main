@@ -16,6 +16,7 @@ Creates functions to change matrices (uses linked list from Programming Assignme
 ----------------------------------------------Matrix Functions----------------------------------------------
 
 -----Exported type-----
+
 typedef struct EntryObj* Entry;
 
 // Returns a reference to a new nXn Matrix object in the zero state.
