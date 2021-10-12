@@ -13,7 +13,7 @@ Given - Compiles the program
 List.c:
 Creates a doubly linked list and List ADT
 
-List Functions ----------------------------------------------------------------------------------------
+----------------------------------------------List Functions----------------------------------------------
 
 newNode(int data, Node prev, Node next) - creates a new node that initializes the index to -1, node value to data, size to 0, and prev/next to NULL
 
