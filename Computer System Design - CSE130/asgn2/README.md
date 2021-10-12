@@ -1,5 +1,7 @@
 Alan Szeto, Diego Vasquez
 
+This project is a multi-threaded HTTP server using sockets that supports GET and PUT requests to read and write files and stores them into the server.
+An additional requirement is that this project creates backups of previous requests and these backups can be recovered by using the timestamp of previous requests.
 
 Instructions:
 
