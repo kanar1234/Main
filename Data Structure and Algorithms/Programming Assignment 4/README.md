@@ -29,7 +29,7 @@ typedef struct GraphObj* Graph;
 
 -----Constructors-Destructors-----
 
-//Returns a reference to a new Graph object in the zero state.
+//Returns a reference to a new Graph object in the zero state
 
 Graph newGraph(int n);
 
@@ -39,7 +39,7 @@ void freeGraph(Graph* pG);
 
 -----Access functions-----
 
-//Returns the other of the graph G
+//Returns the order of the graph G
 
 int getOrder(Graph G);
 
@@ -61,14 +61,24 @@ int getDist(Graph G, int u);
 
 -----Manipulation procedures-----
 
+//Removes all edges from Graph G
+
 void makeNull(Graph G);
+
+//Adds a directed edge from point u to v in Graph G
 
 void addEdge(Graph G, int u, int v);
 
+//Adds an arc from point u to v in Graph G
+
 void addArc(Graph G, int u, int v);
+
+//Performs BFS on graph G with s as its source
 
 void BFS(Graph G, int s);
 
 -----Other operations-----
+
+//prints Graph G onto the terminal
 
 void printGraph(FILE* out, Graph G);
