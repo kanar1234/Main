@@ -15,50 +15,78 @@ Creates a doubly linked list and List ADT
 
 ----------------------------------------------List Functions----------------------------------------------
 
-newNode(int data, Node prev, Node next) - creates a new node that initializes the index to -1, node value to data, size to 0, and prev/next to NULL
+-----Exported type-----
 
-freeNode(Node* pN) - frees node pN
+typedef struct ListObj* List;
 
-newList(void) - creates a new list
 
-freeList(List* pL) - frees list pL
+-----Constructors-Destructors-----
 
-front(List L) - returns the first node in L
+List newList(void); // Creates and returns a new empty List.
 
-back(List L) - returns the last node in L
+void freeList(List* pL); // Frees all heap memory associated with *pL, and sets *pL to NULL.
 
-index(List L) - returns current index
+-----Access functions-----
 
-get(List L) - returns value at current index
+int length(List L); // Returns the number of elements in L.
 
-isEmpty(List L) - returns 1 if list is empty else returns 0
+int index(List L); // Returns index of cursor element if defined, -1 otherwise.
 
-equals(List A, List B) - returns 1 if A = B else returns 0
+int front(List L); // Returns front element of L. Pre: length()>0
 
-clear(List L) - deallocates all nodes and sets everything to its initial values
+int back(List L); // Returns back element of L. Pre: length()>0
 
-moveFront(List L) - moves index to the first node
+int get(List L); // Returns cursor element of L. Pre: length()>0, index()>=0
 
-moveBack(List L) - moves index to the last node
+int equals(List A, List B); // Returns true (1) if Lists A and B are in same state, and returns false (0) otherwise.
 
-movePrevious(List L) - moves index to the previous node if it exists
+-----Manipulation procedures-----
 
-moveNext(List L) - moves index to the next node if it exists
+void clear(List L); // Resets L to its original empty state.
 
-prepend(List L, int data) - adds a node to the front of L with value = data
+void moveFront(List L); // If L is non-empty, sets cursor under the front element, otherwise does nothing
 
-append(List L, int data) - adds a node to the back of L with value = data
+void moveBack(List L); // If L is non-empty, sets cursor under the back element, otherwise does nothing
+void movePrev(List L); // If cursor is defined and not at front, move cursor one step toward the front of L; if cursor is defined and at
+front, cursor becomes undefined; if cursor is undefined
+do nothing
 
-insertBefore(List L, int data) - adds a node between the current index and the previous index
+void moveNext(List L); // If cursor is defined and not at back, move cursor one
+step toward the back of L; if cursor is defined and at
+back, cursor becomes undefined; if cursor is undefined
+do nothing
 
-insertAfter(List L, int data) - adds a node between the current index and the next index
+void prepend(List L, int data); // Insert new element into L. If L is non-empty,
+insertion takes place before front element.
+ 
+void append(List L, int data); // Insert new element into L. If L is non-empty,
+insertion takes place after back element.
 
-deleteFront(List L) - pops the node in L
+void insertBefore(List L, int data); // Insert new element before cursor.
+Pre: length()>0, index()>=0
 
-deleteBack(List L) - dequeues node in L
+void insertAfter(List L, int data); // Insert new element before cursor.
+Pre: length()>0, index()>=0
 
-delete(List L) - deletes node in current index and sets index to -1
+void deleteFront(List L); // Delete the front element. Pre: length()>0
 
-printList(List L) - prints list onto terminal
+void deleteBack(List L); // Delete the back element. Pre: length()>0
 
-copyList(List L) - returns a copy of L
+void delete(List L); // Delete cursor element, making cursor undefined.
+Pre: length()>0, index()>=0
+
+-----Other operations-----
+
+void printList(FILE* out, List L); // Prints to the file pointed to by out, a
+string representation of L consisting
+of a space separated sequence of integers,
+string representation of L consisting
+of a space separated sequence of integers,
+with front on left.
+
+List copyList(List L); // Returns a new List representing the same integer
+sequence as L. The cursor in the new list is undefined,
+regardless of the state of the cursor in L. The state
+of L is unchanged.
+
+int isPalindrome(List L); //Returns 1 if L is a palindrome otherwise returns 0
