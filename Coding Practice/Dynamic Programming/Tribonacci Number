@@ -4,17 +4,17 @@ class Solution(object):
         :type n: int
         :rtype: int
 		
-		Description: The Tribonacci number is the sum of the previous 3 values in the series besides the first 3
+        Description: The Tribonacci number is the sum of the previous 3 values in the series besides the first 3
 		ie. 0,1,1,2,4,7,13... etc
         """
-		## This time I create just enough memory in my array to fit all the values I need to memoize my values and save a bit of runtime
+        ## This time I create just enough memory in my array to fit all the values I need to memoize my values and save a bit of runtime
         memo = [0]*(n-2)
 		
         def fib(m):
-			## Base cases: tri(0) = 0, tri(1,2) = 1
+            ## Base cases: tri(0) = 0, tri(1,2) = 1
             if m == 0: return 0 
             if m < 3: return 1
-			## if value is not memoized, memoize it
+            ## if value is not memoized, memoize it
             if memo[m-3] == 0:
                 memo[m-3] = fib(m-1) + fib(m-2) + fib(m-3)
             return memo[m-3] 
