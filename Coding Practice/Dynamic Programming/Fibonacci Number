@@ -1,13 +1,13 @@
 class Solution(object):
-	  """
-      Description
-      Given n, find the nth fibonacci number in the series
-
-      The fibonacci series is the sum of its previous two values
-
-      ie. 0,1,1,2,3,5,8,13,21 etc
+	"""
+		Description
+		Given n, find the nth fibonacci number in the series
 		
-	  """
+		The fibonacci series is the sum of its previous two values
+		
+		ie. 0,1,1,2,3,5,8,13,21 etc
+		
+	"""
     def fib(self, n):
 		## To start off, I create an array to memoize values that I have already seen
         memo = [0]*(n+1)
