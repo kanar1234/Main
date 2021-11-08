@@ -1,26 +1,24 @@
 class Solution(object):
-	"""
-		Description
-		Given n, find the nth fibonacci number in the series
-		
-		The fibonacci series is the sum of its previous two values
-		
-		ie. 0,1,1,2,3,5,8,13,21 etc
-		
-	"""
     def fib(self, n):
-		## To start off, I create an array to memoize values that I have already seen
+    """
+    Description: Given n, find the nth fibonacci number in the series	
+    The fibonacci series is the sum of its previous two values
+		
+    ie. 0,1,1,2,3,5,8,13,21 etc
+		
+    """
+        ## To start off, I create an array to memoize values that I have already seen
         memo = [0]*(n+1)
 		
-		## Base cases: fib(0) = 0, fib(1), fib(2) = 1
+        ## Base cases: fib(0) = 0, fib(1), fib(2) = 1
         if n == 0:
             return 0
         if n == 1 or n == 2:
             return 1
 			
-		## Now, we check to see if we have memoized our value. If we see that memo[n] == 0 then 
-		## we know that we have not seen fib(n) yet so we calculate it recursively and then store it
-		## in our memo
+        ## Now, we check to see if we have memoized our value. If we see that memo[n] == 0 then 
+        ## we know that we have not seen fib(n) yet so we calculate it recursively and then store it
+        ## in our memo
         if memo[n] == 0:
             memo[n] = self.fib(n-1) + self.fib(n-2)
         return memo[n]
