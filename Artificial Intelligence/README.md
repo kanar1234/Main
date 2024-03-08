@@ -5,7 +5,7 @@ Here is a short descriptions of each project.
 
 Note - Pacman functions and graphics are given.
 
-PA0 - Python review. Calculates cost of fruits purchased from shops and returns the best shop to buy fruits at.
+PA0 - Review. Calculates cost of fruits purchased from shops and returns the best shop to buy fruits at.
 -Note: The pacman models and boards are given.
 
 PA1 - Finds the shortest path from Pacman to a goal.
