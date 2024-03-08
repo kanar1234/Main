@@ -1,3 +1,5 @@
+Constructor For Linked List used that will be used as a base for future programs
+
 Lex.c:
 Sorts input file and outputs sorted version of input using insertion sort in O(n^2) time
 
