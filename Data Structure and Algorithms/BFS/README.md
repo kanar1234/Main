@@ -6,11 +6,14 @@ Includes features to retrieve graph properties like order, size, source, parent,
 ------------------------------ How to run -------------------------------
 
 GraphClient.c/GraphTest.c -
-    - Change EXEBIN to GraphClient or GraphTest whichever you want to use in Makefile
-    - Modify the graphs or functions in GraphClient.c or GraphTest.c 
-    - Run make to create the program
-    - Run the program 
 
+    - Change EXEBIN to GraphClient or GraphTest whichever you want to use in Makefile
+    
+    - Modify the graphs or functions in GraphClient.c or GraphTest.c 
+    
+    - Run make to create the program
+    
+    - Run the program 
 
 ------------------------------ Files -------------------------------
 
