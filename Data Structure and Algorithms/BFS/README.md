@@ -1,10 +1,18 @@
+------------------------------ Description ------------------------------
+Implements a graph data structure with functions for adding edges, performing breadth-first search (BFS), and finding shortest paths.
+Includes features to retrieve graph properties like order, size, source, parent, and distance.
+------------------------------ How to run -------------------------------
+GraphClient.c/GraphTest.c -
+    - Change EXEBIN to GraphClient or GraphTest whichever you want to use in Makefile
+    - Modify the graphs or functions in GraphClient.c or GraphTest.c 
+    - Run make to create the program
+    - Run the program 
+
+
+------------------------------ Files -------------------------------
 Make:
 Creates the Graph ADT
 
-How to run: 
-
-
-Description
 Graph.c:
 Creates Graph ADT
 
@@ -12,7 +20,7 @@ Graph.h:
 Header for the Graph ADT
 
 FindPath.c
-Prints the adjacency list, BFS, and SSSP if it exists
+Prints the adjacency list, uses BFS, and SSSP if it exists
 
 List.c:
 Creates a doubly linked list and the List ADTs
