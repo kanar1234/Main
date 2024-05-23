@@ -1,6 +1,7 @@
 ------------------------------ Description ------------------------------
 Implements a graph data structure with functions for adding edges, performing breadth-first search (BFS), and finding shortest paths.
 Includes features to retrieve graph properties like order, size, source, parent, and distance.
+
 ------------------------------ How to run -------------------------------
 GraphClient.c/GraphTest.c -
     - Change EXEBIN to GraphClient or GraphTest whichever you want to use in Makefile
