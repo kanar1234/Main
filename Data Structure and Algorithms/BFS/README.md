@@ -11,9 +11,9 @@ GraphClient.c/GraphTest.c -
     
     - Modify the graphs or functions in GraphClient.c or GraphTest.c 
     
-    - Run make to create the program
+    - Call make to create the application
     
-    - Run the program 
+    - Run the created application 
 
 ------------------------------ Files -------------------------------
 
