@@ -1,3 +1,10 @@
+Make:
+Creates the Graph ADT
+
+How to run: 
+
+
+Description
 Graph.c:
 Creates Graph ADT
 
