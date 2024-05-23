@@ -1,1 +1,1 @@
-
+Computer System Design (CSE130) covers the fundamental principles and practices of designing computer systems. The course includes topics such as computer architecture, operating systems, networking, and parallel computing.
