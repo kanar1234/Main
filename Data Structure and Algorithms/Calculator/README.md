@@ -1,3 +1,22 @@
+------------------------------ Description ------------------------------
+
+Implements a graph data structure with functions for adding edges, performing breadth-first search (BFS), and finding shortest paths.
+Includes features to retrieve graph properties like order, size, source, parent, and distance.
+
+------------------------------ How to run -------------------------------
+
+GraphClient.c/GraphTest.c -
+
+    - Change EXEBIN to GraphClient or GraphTest whichever you want to use in Makefile
+    
+    - Modify the graphs or functions in GraphClient.c or GraphTest.c 
+    
+    - Call make to create the application
+    
+    - Run the created application 
+
+----------------------------------------------Big Integer Functions----------------------------------------------
+
 Arithmetic.c:
 Sorts input file and outputs sorted version of input
 
