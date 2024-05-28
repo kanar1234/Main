@@ -1,4 +1,4 @@
-This directory contains projects done in my A.I. class.
+This directory contains code for the pacman AI
 All projects are done in python.
 
 Here is a short descriptions of each project.
