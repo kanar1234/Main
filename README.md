@@ -14,4 +14,4 @@ Explore the Projects: Each project folder contains a README file that provides a
 Review Practice Problems: The practice problems are organized by topic or source. Each problem folder includes the problem statement and my solution.
 
 Technologies Used
-Programming Languages: Python, Java, C++, JavaScript, etc.
+Programming Languages: Python, Java, C++, JavaScript
