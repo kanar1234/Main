@@ -1,5 +1,3 @@
-UCSC Projects and Practice Problems
-
 Welcome to my GitHub repository! This repository, maintained by Alan Szeto, contains a collection of my projects developed during my time at the University of California, Santa Cruz (UCSC), as well as various practice problems I have tackled to keep my coding skills sharp.
 
 Contents
