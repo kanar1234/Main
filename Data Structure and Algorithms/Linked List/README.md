@@ -1,3 +1,5 @@
+
+
 Constructor For Linked List used that will be used as a base for future programs
 
 Lex.c:
