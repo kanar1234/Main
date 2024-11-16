@@ -5,7 +5,10 @@ This program implements a matrix in C, providing functionality to initialize, ma
 ------------------------------ How to run -------------------------------
 
 Run make on a linux machine or on a windows machine that can run a make file
+
 After running make, an application of the target is created (currently set as MatrixTest)
+
+Run the created application i.e ./MatrixTest for this example
 
 ------------------------------ How to Modify -------------------------------
 
