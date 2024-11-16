@@ -9,7 +9,7 @@ GraphClient.c/GraphTest.c -
 
     - Change value of EXEBIN to GraphClient or GraphTest whichever you want to use in Makefile
     
-    - Modify the graphs or functions in GraphClient.c or GraphTest.c 
+    - Modify the graphs or functions in GraphClient.c or GraphTest.c to whatever functions you want to test below
     
     - Call make to create the application
     
