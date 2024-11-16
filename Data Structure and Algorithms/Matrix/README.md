@@ -8,6 +8,7 @@ Run make on a linux machine or on a windows machine that can run a make file
 After running make, an application of the target is created (currently set as MatrixTest)
 
 ------------------------------ How to Modify -------------------------------
+
 Either create a new .c file and create your own matrices modify them yourself or you can use the MatrixTest.c as an example
 
 ----------------------------------------------Matrix Functions----------------------------------------------
