@@ -1,7 +1,5 @@
 //-----------------------------------------------------------------------------
 // Alan Szeto
-// 1672580
-// pa2
 // MatrixClient.c 
 // A test client for the Matrix ADT
 //-----------------------------------------------------------------------------
@@ -25,47 +23,47 @@ int main(){
    changeEntry(A, 3,2,8); changeEntry(B, 3,2,1);
    changeEntry(A, 3,3,9); changeEntry(B, 3,3,1);
 
-   printf("%d\n", NNZ(A));
+   printf("Matrix A: \nSize: %d\n", NNZ(A));
    printMatrix(A);
    printf("\n");
 
-   printf("%d\n", NNZ(B));
+   printf("Matrix B: \nSize: %d\n", NNZ(B));
    printMatrix(B);
    printf("\n");
 
    C = scalarMult(1.5, A);
-   printf("%d\n", NNZ(C));
+   printf("Scalar Multiple of A by 1.5: \nSize: %d\n", NNZ(C));
    printMatrix(C);
    printf("\n");
 
    D = sum(A, B);
-   printf("%d\n", NNZ(D));
+   printf("Sum on Matrix A + B: \nSize: %d\n", NNZ(D));
    printMatrix(D);
    printf("\n");
 
    E = diff(A, A);
-   printf("%d\n", NNZ(E));
+   printf("Difference of Matrix A - A: \nSize: %d\n", NNZ(E));
    printMatrix(E);
    printf("\n");
 
    F = transpose(B);
-   printf("%d\n", NNZ(F));
+   printf("Transpose B: \nSize: %d\n", NNZ(F));
    printMatrix(F);
    printf("\n");
 
    G = product(B, B);
-   printf("%d\n", NNZ(G));
+   printf("Product of Matrix B*B: \nSize: %d\n", NNZ(G));
    printMatrix(G);
    printf("\n");
 
    H = copy(A);
-   printf("%d\n", NNZ(H));
+   printf("Matrix H: \nSize: %d\n", NNZ(H));
    printMatrix(H);
    printf("\n");
 
-   printf("%s\n", equals(A, H)?"true":"false" );
-   printf("%s\n", equals(A, B)?"true":"false" );
-   printf("%s\n", equals(A, A)?"true":"false" );
+   printf("Matrix A == Matrix H?: %s\n", equals(A, H)?"true":"false" );
+   printf("Matrix A == Matrix B?: %s\n", equals(A, B)?"true":"false" );
+   printf("Matrix A == Matrix A?: %s\n", equals(A, A)?"true":"false" );
 
    makeZero(A);
    printf("%d\n", NNZ(A));

@@ -1,17 +1,18 @@
-List.c:
-Creates a doubly linked list and List ADT (From Assignment 1)
+------------------------------ Description ------------------------------
 
-List.h:
-Has the List functions
+This program implements a matrix in C, providing functionality to initialize, manipulate, and perform operations on matrices. Key features include creating a matrix, adding and multiplying matrices, transposing a matrix, and freeing allocated memory to avoid leaks. It's designed for efficient numerical computations and demonstrates fundamental memory management and algorithm design in C.
 
-Sparse.c:
-Takes in input from files and tests its functions
+------------------------------ How to run -------------------------------
 
-Makefile:
-Given - Compiles Matrix List and Matrix Test
+Run make on a linux machine or on a windows machine that can run a make file
 
-Matrix.c:
-Creates functions to change matrices (uses linked list from Programming Assignment 1)
+After running make, an application of the target is created (currently set as MatrixTest)
+
+Run the created application i.e ./MatrixTest for this example
+
+------------------------------ How to Modify -------------------------------
+
+Either create a new .c file and create your own matrices modify them yourself or you can use the MatrixTest.c as an example
 
 ----------------------------------------------Matrix Functions----------------------------------------------
 
