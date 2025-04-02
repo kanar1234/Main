@@ -1,8 +1,8 @@
 from fastapi import FastAPI, HTTPException, Depends
 from sqlalchemy.orm import Session
-from .database import SessionLocal
+from Wedevx_TakeHome.app.database import SessionLocal
 
-from . import models, schemas, crud, database, email_utils
+from Wedevx_TakeHome.app import models, schemas, crud, database, email_utils
 
 app = FastAPI()
 

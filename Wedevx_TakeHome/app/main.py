@@ -18,6 +18,7 @@ def get_db() -> Session:
         db.close()  # Close the session after the request is finished
 
 
+# Verify User -> Returns Token
 @app.post("/auth/login")
 def login(form_data: OAuth2PasswordRequestForm = Depends(), db: Session = Depends(get_db)):
     user = db.query(User).filter(User.username == form_data.username).first()
@@ -28,6 +29,7 @@ def login(form_data: OAuth2PasswordRequestForm = Depends(), db: Session = Depend
     return {"access_token": token, "token_type": "bearer"}
 
 
+# Post Request
 @app.post("/leads/", response_model=schemas.LeadOut)
 def create_lead(lead: schemas.LeadCreate, db: Session = Depends(get_db),
                 current_user: models.User = Depends(auth.get_current_user)):
@@ -41,12 +43,14 @@ def create_lead(lead: schemas.LeadCreate, db: Session = Depends(get_db),
     return db_lead
 
 
+# Get Request
 @app.get("/leads/", response_model=list[schemas.LeadOut])
 def get_leads(db: Session = Depends(database.get_db),
               current_user: models.User = Depends(auth.get_current_user)):
     return crud.get_leads(db)
 
 
+# Put Request
 @app.put("/leads/{lead_id}/{state}", response_model=schemas.LeadOut)
 def update_lead(lead_id: int, state: models.LeadState, db: Session = Depends(database.get_db),
                 current_user: models.User = Depends(auth.get_current_user)):

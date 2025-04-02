@@ -12,7 +12,7 @@ SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 Base = declarative_base()
 
 
-# Lead State Enum
+# Lead States
 class LeadState(PyEnum):
     PENDING = "PENDING"
     REACHED_OUT = "REACHED_OUT"
@@ -29,7 +29,7 @@ class Lead(Base):
     state = Column(Enum(LeadState), default=LeadState.PENDING)
 
 
-# Authentication format
+# User format
 class User(Base):
     __tablename__ = "users"
 

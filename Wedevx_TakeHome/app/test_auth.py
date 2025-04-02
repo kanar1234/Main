@@ -33,16 +33,16 @@ state = "REACHED_OUT"  # The state to update (make sure this matches the LeadSta
 # response = requests.put(f"http://127.0.0.1:8000/leads/{lead_id}/{state}", headers=headers)
 
 # Make a GET request to the FastAPI server to update the lead
-# response = requests.get(f"http://127.0.0.1:8000/leads/", headers=headers)
+response = requests.get(f"http://127.0.0.1:8000/leads/", headers=headers)
 
-lead_data = {
-    "first_name": "John",
-    "last_name": "Doe",
-    "email": "john.doe7@example.com",
-    "resume": "Test text."
-}
+# lead_data = {
+#     "first_name": "John",
+#     "last_name": "Doe",
+#     "email": "john.doe7@example.com",
+#     "resume": "Test text."
+# }
 # Make a POST request to the FastAPI server to update the lead
-response = requests.post("http://127.0.0.1:8000/leads/", json=lead_data, headers=headers)
+# response = requests.post("http://127.0.0.1:8000/leads/", json=lead_data, headers=headers)
 
 # Check if the request was successful (status code 200)
 if response.status_code == 200:
