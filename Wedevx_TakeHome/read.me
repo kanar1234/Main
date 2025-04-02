@@ -1,0 +1,22 @@
+To run this program:
+
+1. Open up your IDE (I used IntelliJ for mine) and navigate to the Wedevx_TakeHome directory
+
+2. In add_testuser.py
+    change the value of test_user and test_password to whatever you want
+   Run add_testuser.py
+
+3. Open up test_auth.py ->
+    Make sure the credentials are what you entered in the previous steps for user and password
+    If you want a put request:
+        uncomment lead_id, state, and  response = requests.get(f"http://127.0.0.1:8000/leads/{lead_id}/{state}", headers=headers)
+        make sure lead_id is correlated to an existing user and state is either "REACHED_OUT" or "PENDING and
+    If you want a get request:
+        uncomment response = requests.get(f"http://127.0.0.1:8000/leads/{lead_id}/{state}", headers=headers)
+    If you want a post request:
+        uncomment lead_data and change the email to a UNIQUE email and
+        uncomment response = requests.post("http://127.0.0.1:8000/leads/", json=lead_data)
+
+4. Run uvicorn app.main:app --reload
+
+5. Run test_auth.py and the output will be printed in stdout
