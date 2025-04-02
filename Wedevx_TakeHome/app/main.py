@@ -2,7 +2,7 @@ from fastapi import FastAPI, Depends, HTTPException, status
 from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
 from sqlalchemy.orm import Session
 
-from . import models, schemas, crud, auth, database, pwd_utils, auth_utils
+from . import models, schemas, crud, auth, database, pwd_utils, auth_utils, email_utils
 from .models import User
 from .database import SessionLocal
 
@@ -28,8 +28,22 @@ def login(form_data: OAuth2PasswordRequestForm = Depends(), db: Session = Depend
     return {"access_token": token, "token_type": "bearer"}
 
 
+@app.post("/leads/", response_model=schemas.LeadOut)
+def create_lead(lead: schemas.LeadCreate, db: Session = Depends(get_db),
+                current_user: models.User = Depends(auth.get_current_user)):
+    db_lead = crud.create_lead(db, lead)
+
+    # Send email notifications
+    email_utils.send_email(lead.email, "Lead Submitted", "Thank you for submitting your lead.")
+    email_utils.send_email("attorney@example.com", "New Lead Submitted",
+                           f"A new lead from {lead.first_name} {lead.last_name} has been submitted.")
+
+    return db_lead
+
+
 @app.get("/leads/", response_model=list[schemas.LeadOut])
-def get_leads(db: Session = Depends(database.get_db), current_user: models.User = Depends(auth.get_current_user)):
+def get_leads(db: Session = Depends(database.get_db),
+              current_user: models.User = Depends(auth.get_current_user)):
     return crud.get_leads(db)
 
 
